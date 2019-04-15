@@ -1,10 +1,14 @@
 > What data types do each of these values represent?
 
 "A Clockwork Orange": String
+
 42: Integer
+
 09/02/1945: Date
+
 98.7: Float
-$15.99: String
+
+$15.99: Currency
 
 > Explain when a database would be used. Explain when a text file would be used.
 
@@ -53,12 +57,31 @@ Retrieve everything from the payments table where the payee is equal to 'Mega Fo
 
 > The email and sign-up date for the user named DeAndre Data.
 
-`select email,signup from users where name = 'Aleesia Algorithm'`
+**Query #1**
+select email,signup from users where name = 'Aleesia Algorithm';
+
+| email                    | signup                   |
+| ------------------------ | ------------------------ |
+| aleesia.algorithm@uw.edu | 2014-10-24T00:00:00.000Z |
+
 
 > The user ID for the user with email 'aleesia.algorithm@uw.edu'.
 
-`select userid from users where email = 'aleesia.algorithm@uw.edu'`
+**Query #2**
+
+select userid from users where email = 'aleesia.algorithm@uw.edu';
+
+| userid |
+| ------ |
+| 1      |
+
 
 > All the columns for the user ID equal to 4.
 
-`select * from users where userid = 4`
+**Query #3**
+select * from users where userid = 4;
+
+| userid | name           | email             | signup                   |
+| ------ | -------------- | ----------------- | ------------------------ |
+| 4      | Brandy Boolean | bboolean@nasa.gov | 1999-10-15T00:00:00.000Z |
+
